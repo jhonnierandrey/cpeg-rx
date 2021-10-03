@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Card from "./Card";
 
 import { INTRO, SCAPEGOAT, DELAY } from "./elements";
@@ -18,20 +21,50 @@ function Main() {
         setDelay(DELAY[Math.floor(Math.random() * DELAY.length)]);
     }
 
+    function copyText() {
+        /* Get the text field */
+        var copyText = document.getElementById("excuseResult");
+      
+        /* Select the text field */
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+      
+         /* Copy the text inside the text field */
+        // navigator.clipboard.writeText(copyText.value);
+        document.execCommand("copy")
+
+        toast.success('Text copied !', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+      }
+
     return (
         <main className="px-3">
-          <h1>Canceling Plans Excuse Generator</h1>
-          {/* <p className="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p> */}
-          <p className="lead">
-            <a
-              href="/"
-              className="btn btn-lg btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#cpegModal"
-            >
-              Start now
-            </a>
-          </p>
+          <section className="home">
+            <div className="home-title">
+                <h1>Canceling Plans <br /> Excuse Generator</h1>
+                {/* <p className="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p> */}
+                <p className="lead">
+                    <a
+                    href="/"
+                    className="btn btn-lg btn-outline-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#cpegModal"
+                    >
+                    Start now
+                    </a>
+                </p>
+            </div>
+            <div className="home-ava">
+                
+            </div>
+          </section>
     
           {/* MODAL */}
           <div
@@ -80,10 +113,12 @@ function Main() {
                           <span className="delay"> {delay} </span>
                           .
                         </h3>
-                      <div className="mission-control">
-                        <button type="button" className="btn btn-outline-secondary mx-1" disabled><i className="bi bi-star"></i></button>
-                        <button type="button" className="btn btn-outline-secondary mx-1" disabled><i className="bi bi-clipboard"></i></button>
+                        <textarea hidden type="text" value={`${intro} ${scapegoat} ${delay}.`} id="excuseResult" readOnly={true} />
+                      <div className="mission-control mb-1 mt-1">
+                        <button type="button" className="btn btn-outline-secondary mx-1" title="Favourite" disabled><i className="bi bi-star"></i></button>
+                        <button type="button" onClick={copyText} className="btn btn-outline-secondary mx-1" title="Copy to clipboard"><i className="bi bi-clipboard"></i></button>
                       </div>
+                      <ToastContainer />
                   </div>
                 </div>
                 <div className="modal-footer flex-column border-top-0">
