@@ -1,6 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 * {
   box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
 }
 
 /* Custom default button */
@@ -74,32 +75,58 @@ header, main, footer {
   max-width: 80%;
 }
 .modal .modal-body-generator {
-  display: flex;
   justify-content: space-between;
 }
+.modal .modal-body-result {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 1rem 0rem;
+  font-style: italic;
+  text-align: left;
+}
+.modal .modal-body-result span.intro {
+  border-bottom: 2px solid #dc3545;
+}
+.modal .modal-body-result span.scapegoat {
+  border-bottom: 2px solid #ffc107;
+}
+.modal .modal-body-result span.delay {
+  border-bottom: 2px solid #0dcaf0;
+}
+.modal .modal-body-result .mission-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .modal .card {
-  width: 18rem;
-  color: #FFFFFF !important;
-  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
-}
-.modal .card.bg-danger {
-  background-color: #E84A5F !important;
-}
-.modal .card.bg-warning {
-  background-color: #FACF5A !important;
-}
-.modal .card.bg-info {
-  background-color: #539DDB !important;
+  width: 20rem;
+  border: 0.2rem solid;
 }
 .modal .card .card-header {
   border-bottom: none;
   background-color: transparent;
+}
+.modal .card .card-body {
+  border-color: inherit;
 }
 .modal .card .form-select {
   background-color: transparent;
   color: inherit;
   padding: 0.2rem;
   font-style: italic;
+  border-color: inherit;
+}
+
+@media (max-width: 767.98px) {
+  .modal .modal-dialog {
+    max-width: 100%;
+  }
+}
+@media (max-width: 991.98px) {
+  .modal-body-generator .card {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

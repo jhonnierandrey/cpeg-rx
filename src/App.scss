@@ -3,17 +3,18 @@
 
 * {
   box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
 }
 
 // PALETTE
 
 $black : #2A363B;
-$red : #E84A5F;
+$red : #dc3545;
 $pink : #FF847C;
 $accent : #FECEA8;
 $white : #FFFFFF;
-$yellow : #FACF5A;
-$blue : #539DDB;
+$yellow : #ffc107;
+$blue : #0dcaf0;
 
 // THEME
 
@@ -94,30 +95,62 @@ header, main, footer {
   }
 
   .modal-body-generator{
-    display: flex;
+    // display: flex;
     justify-content: space-between;
   }
 
-  .card {
-    width: 18rem;
-    color: $white !important;
-    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  .modal-body-result{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 1rem 0rem;
+    font-style: italic;
+    text-align: left;
+    
+    span.intro {
+      border-bottom: 2px solid $red;
+    }
+    
+    span.scapegoat {
+      border-bottom: 2px solid $yellow;
+    }
+    
+    span.delay {
+      border-bottom: 2px solid $blue;
+    }
 
-    &.bg-danger {
-      background-color: $red !important;
+    .mission-control {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+  }
+
+  .card {
+    width: 20rem;
+    // color: $white !important;
+    // text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    border: 0.2rem solid;
+
+    // &.bg-danger {
+    //   background-color: $red !important;
+    // }
     
-    &.bg-warning {
-      background-color: $yellow !important;
-    }
+    // &.bg-warning {
+    //   background-color: $yellow !important;
+    // }
     
-    &.bg-info {
-      background-color: $blue !important;
-    }
+    // &.bg-info {
+    //   background-color: $blue !important;
+    // }
 
     .card-header {
       border-bottom: none;
       background-color: transparent;
+    }
+
+    .card-body {
+      border-color: inherit;
     }
 
     .form-select {
@@ -125,6 +158,23 @@ header, main, footer {
       color: inherit;
       padding: 0.2rem;
       font-style: italic;
+      border-color: inherit;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .modal {
+    .modal-dialog {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .modal-body-generator {
+    .card {
+      width: 100%;
     }
   }
 }
