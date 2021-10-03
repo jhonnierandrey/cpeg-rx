@@ -1,10 +1,8 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 * {
   box-sizing: border-box;
 }
 
-/*
-* Globals
-*/
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
@@ -14,11 +12,18 @@
   /* Prevent inheritance from `body` */
 }
 
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+a:hover {
+  color: #FECEA8;
+}
+
 /*
 * Base structure
 */
 #root {
-  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
   background-image: url("./assets/img/bg.jpg");
   background-repeat: no-repeat;
@@ -43,7 +48,8 @@
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, 0.25);
+  color: #FECEA8;
+  border-bottom-color: #FECEA8;
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -59,6 +65,41 @@ header, main, footer {
   padding: 1rem;
   background-color: rgba(42, 54, 59, 0.5);
   border-radius: 0.5rem;
+}
+
+.modal {
+  color: #2A363B;
+}
+.modal .modal-dialog {
+  max-width: 80%;
+}
+.modal .modal-body-generator {
+  display: flex;
+  justify-content: space-between;
+}
+.modal .card {
+  width: 18rem;
+  color: #FFFFFF !important;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+.modal .card.bg-danger {
+  background-color: #E84A5F !important;
+}
+.modal .card.bg-warning {
+  background-color: #FACF5A !important;
+}
+.modal .card.bg-info {
+  background-color: #539DDB !important;
+}
+.modal .card .card-header {
+  border-bottom: none;
+  background-color: transparent;
+}
+.modal .card .form-select {
+  background-color: transparent;
+  color: inherit;
+  padding: 0.2rem;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=App.css.map */
