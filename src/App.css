@@ -146,6 +146,19 @@ header, main, footer {
   border-color: inherit;
 }
 
+#footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+#footer ul li {
+  border-right: 1px solid #2A363B;
+  padding: 0rem 1rem;
+}
+#footer ul li:last-child {
+  border-right: none;
+}
+
 @media (max-width: 767.98px) {
   .home .home-title {
     width: 100%;
@@ -160,6 +173,17 @@ header, main, footer {
 
   .modal .modal-dialog {
     max-width: 100%;
+  }
+
+  #footer {
+    font-size: small;
+  }
+  #footer ul {
+    flex-direction: column;
+  }
+  #footer ul li {
+    border-right: none;
+    padding: 0rem 1rem;
   }
 }
 @media (max-width: 991.98px) {

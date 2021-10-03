@@ -203,6 +203,24 @@ header, main, footer {
   }
 }
 
+// FOOTER
+
+#footer {
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  ul li {
+    border-right: 1px solid $black;
+    padding: 0rem 1rem;
+  }
+  ul li:last-child {
+    border-right: none;
+  }
+}
+
 @media (max-width: 767.98px) {
   .home {
     .home-title {
@@ -222,6 +240,19 @@ header, main, footer {
   .modal {
     .modal-dialog {
       max-width: 100%;
+    }
+  }
+
+  #footer {
+    font-size: small;
+
+    ul {
+      flex-direction: column;
+    }
+    
+    ul li {
+      border-right: none;
+      padding: 0rem 1rem;
     }
   }
 }
