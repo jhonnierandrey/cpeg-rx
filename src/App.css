@@ -150,6 +150,7 @@ header, main, footer {
   list-style: none;
   display: flex;
   justify-content: center;
+  padding: 0rem;
 }
 #footer ul li {
   border-right: 1px solid #2A363B;
