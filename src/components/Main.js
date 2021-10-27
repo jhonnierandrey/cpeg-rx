@@ -12,6 +12,7 @@ function Main() {
     const [delay, setDelay] = useState('');
 
     useEffect(()=>{
+        document.title = 'CPEG | Home'
         randomExcuse();
     }, [])
 
