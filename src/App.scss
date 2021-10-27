@@ -90,31 +90,58 @@ header, main, footer {
 
 // HOME
 
-.home {
+.home, .login, .register, .about, .not-found {
   display: flex;
   height: 50vh;
 
-  .home-title {
+  .home-title, .login-title, .register-title, .about-title, .not-found-title {
     width: 50%;
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 
+    p.lead {
+      margin: 0;
+    }
+
     h1 {
       font-size: 3.5rem;
     }
   }
 
-  .home-ava {
+  .home-ava, .login-ava, .register-ava, .about-ava, .not-found-ava {
     width: 50%;
-    background-image: url('./assets/img/ava-home.svg');
     background-size: contain;
     background-repeat: no-repeat;
-
+    
     &:hover {
       transform: scale(1.1);
     }
+  }
+  
+  .home-ava{
+    background-image: url('./assets/img/ava-home.svg');
+  }
+  
+  .login-ava{
+    background-image: url('./assets/img/ava-login.svg');
+  }
+  
+  .register-ava{
+    background-image: url('./assets/img/ava-register.svg');
+  }
+  
+  .about-ava{
+    background-image: url('./assets/img/ava-about.svg');
+  }
+  
+  .not-found-ava{
+    background-image: url('./assets/img/not-found.svg');
+  }
+  
+  form {
+    color: $black;
   }
 }
 
@@ -223,8 +250,8 @@ header, main, footer {
 }
 
 @media (max-width: 767.98px) {
-  .home {
-    .home-title {
+  .home, .login, .register, .about {
+    .home-title, .login-title, .register-title, .about-title {
       width: 100%;
       text-align: center;
       
@@ -233,7 +260,7 @@ header, main, footer {
       }
     }
 
-    .home-ava{
+    .home-ava, .login-ava, .register-ava, .about-ava {
       display: none;
     }
   }

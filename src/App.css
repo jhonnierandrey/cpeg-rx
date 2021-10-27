@@ -66,28 +66,48 @@ header, main, footer {
   border-radius: 0.5rem;
 }
 
-.home {
+.home, .login, .register, .about, .not-found {
   display: flex;
   height: 50vh;
 }
-.home .home-title {
+.home .home-title, .home .login-title, .home .register-title, .home .about-title, .home .not-found-title, .login .home-title, .login .login-title, .login .register-title, .login .about-title, .login .not-found-title, .register .home-title, .register .login-title, .register .register-title, .register .about-title, .register .not-found-title, .about .home-title, .about .login-title, .about .register-title, .about .about-title, .about .not-found-title, .not-found .home-title, .not-found .login-title, .not-found .register-title, .not-found .about-title, .not-found .not-found-title {
   width: 50%;
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.home .home-title h1 {
+.home .home-title p.lead, .home .login-title p.lead, .home .register-title p.lead, .home .about-title p.lead, .home .not-found-title p.lead, .login .home-title p.lead, .login .login-title p.lead, .login .register-title p.lead, .login .about-title p.lead, .login .not-found-title p.lead, .register .home-title p.lead, .register .login-title p.lead, .register .register-title p.lead, .register .about-title p.lead, .register .not-found-title p.lead, .about .home-title p.lead, .about .login-title p.lead, .about .register-title p.lead, .about .about-title p.lead, .about .not-found-title p.lead, .not-found .home-title p.lead, .not-found .login-title p.lead, .not-found .register-title p.lead, .not-found .about-title p.lead, .not-found .not-found-title p.lead {
+  margin: 0;
+}
+.home .home-title h1, .home .login-title h1, .home .register-title h1, .home .about-title h1, .home .not-found-title h1, .login .home-title h1, .login .login-title h1, .login .register-title h1, .login .about-title h1, .login .not-found-title h1, .register .home-title h1, .register .login-title h1, .register .register-title h1, .register .about-title h1, .register .not-found-title h1, .about .home-title h1, .about .login-title h1, .about .register-title h1, .about .about-title h1, .about .not-found-title h1, .not-found .home-title h1, .not-found .login-title h1, .not-found .register-title h1, .not-found .about-title h1, .not-found .not-found-title h1 {
   font-size: 3.5rem;
 }
-.home .home-ava {
+.home .home-ava, .home .login-ava, .home .register-ava, .home .about-ava, .home .not-found-ava, .login .home-ava, .login .login-ava, .login .register-ava, .login .about-ava, .login .not-found-ava, .register .home-ava, .register .login-ava, .register .register-ava, .register .about-ava, .register .not-found-ava, .about .home-ava, .about .login-ava, .about .register-ava, .about .about-ava, .about .not-found-ava, .not-found .home-ava, .not-found .login-ava, .not-found .register-ava, .not-found .about-ava, .not-found .not-found-ava {
   width: 50%;
-  background-image: url("./assets/img/ava-home.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
-.home .home-ava:hover {
+.home .home-ava:hover, .home .login-ava:hover, .home .register-ava:hover, .home .about-ava:hover, .home .not-found-ava:hover, .login .home-ava:hover, .login .login-ava:hover, .login .register-ava:hover, .login .about-ava:hover, .login .not-found-ava:hover, .register .home-ava:hover, .register .login-ava:hover, .register .register-ava:hover, .register .about-ava:hover, .register .not-found-ava:hover, .about .home-ava:hover, .about .login-ava:hover, .about .register-ava:hover, .about .about-ava:hover, .about .not-found-ava:hover, .not-found .home-ava:hover, .not-found .login-ava:hover, .not-found .register-ava:hover, .not-found .about-ava:hover, .not-found .not-found-ava:hover {
   transform: scale(1.1);
+}
+.home .home-ava, .login .home-ava, .register .home-ava, .about .home-ava, .not-found .home-ava {
+  background-image: url("./assets/img/ava-home.svg");
+}
+.home .login-ava, .login .login-ava, .register .login-ava, .about .login-ava, .not-found .login-ava {
+  background-image: url("./assets/img/ava-login.svg");
+}
+.home .register-ava, .login .register-ava, .register .register-ava, .about .register-ava, .not-found .register-ava {
+  background-image: url("./assets/img/ava-register.svg");
+}
+.home .about-ava, .login .about-ava, .register .about-ava, .about .about-ava, .not-found .about-ava {
+  background-image: url("./assets/img/ava-about.svg");
+}
+.home .not-found-ava, .login .not-found-ava, .register .not-found-ava, .about .not-found-ava, .not-found .not-found-ava {
+  background-image: url("./assets/img/not-found.svg");
+}
+.home form, .login form, .register form, .about form, .not-found form {
+  color: #2A363B;
 }
 
 .modal {
@@ -161,14 +181,14 @@ header, main, footer {
 }
 
 @media (max-width: 767.98px) {
-  .home .home-title {
+  .home .home-title, .home .login-title, .home .register-title, .home .about-title, .login .home-title, .login .login-title, .login .register-title, .login .about-title, .register .home-title, .register .login-title, .register .register-title, .register .about-title, .about .home-title, .about .login-title, .about .register-title, .about .about-title {
     width: 100%;
     text-align: center;
   }
-  .home .home-title h1 {
+  .home .home-title h1, .home .login-title h1, .home .register-title h1, .home .about-title h1, .login .home-title h1, .login .login-title h1, .login .register-title h1, .login .about-title h1, .register .home-title h1, .register .login-title h1, .register .register-title h1, .register .about-title h1, .about .home-title h1, .about .login-title h1, .about .register-title h1, .about .about-title h1 {
     font-size: 2rem;
   }
-  .home .home-ava {
+  .home .home-ava, .home .login-ava, .home .register-ava, .home .about-ava, .login .home-ava, .login .login-ava, .login .register-ava, .login .about-ava, .register .home-ava, .register .login-ava, .register .register-ava, .register .about-ava, .about .home-ava, .about .login-ava, .about .register-ava, .about .about-ava {
     display: none;
   }
 
