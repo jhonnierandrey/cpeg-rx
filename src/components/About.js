@@ -11,12 +11,10 @@ function About() {
           <section className="about">
             <div className="about-title">
                 <h1>About</h1>
-                <p>
-                    <ul>
-                      <li>Inspired by this <a href="https://www.reddit.com/r/funny/comments/o5upmq/canceling_plans_excuse_generator_oc/" target='_blank' rel='noreferrer'>Reddit post</a>, coded for fun.</li>
-                      <li>Images from <a href="https://undraw.co/illustrations" target='_blank' rel='noreferrer'>unDraw</a>.</li>
-                    </ul>
-                </p>
+                <ul>
+                  <li>Inspired by this <a href="https://www.reddit.com/r/funny/comments/o5upmq/canceling_plans_excuse_generator_oc/" target='_blank' rel='noreferrer'>Reddit post</a>, coded for fun.</li>
+                  <li>Images from <a href="https://undraw.co/illustrations" target='_blank' rel='noreferrer'>unDraw</a>.</li>
+                </ul>
                 <p className="lead">
                     <a
                     href="https://www.jaesmadeit.com/projects"
