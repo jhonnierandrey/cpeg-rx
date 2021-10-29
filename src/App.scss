@@ -40,6 +40,10 @@ a {
   }
 }
 
+.error-msg {
+  color: $red;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
 }
@@ -90,11 +94,16 @@ header, main, footer {
 
 // HOME
 
-.home, .login, .register, .about, .not-found {
+.home, .login, .register, .about, .contact, .not-found {
   display: flex;
   height: 50vh;
 
-  .home-title, .login-title, .register-title, .about-title, .not-found-title {
+  ul {
+    list-style: none;
+    padding: 0rem;
+  }
+
+  .home-title, .login-title, .register-title, .about-title, .contact-title, .not-found-title {
     width: 50%;
     text-align: left;
     display: flex;
@@ -110,7 +119,7 @@ header, main, footer {
     }
   }
 
-  .home-ava, .login-ava, .register-ava, .about-ava, .not-found-ava {
+  .home-ava, .login-ava, .register-ava, .about-ava, .contact-ava, .not-found-ava {
     width: 50%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -134,6 +143,10 @@ header, main, footer {
   
   .about-ava{
     background-image: url('./assets/img/ava-about.svg');
+  }
+  
+  .contact-ava{
+    background-image: url('./assets/img/ava-contact.svg');
   }
   
   .not-found-ava{
@@ -250,8 +263,8 @@ header, main, footer {
 }
 
 @media (max-width: 767.98px) {
-  .home, .login, .register, .about {
-    .home-title, .login-title, .register-title, .about-title {
+  .home, .login, .register, .about, .contact {
+    .home-title, .login-title, .register-title, .about-title, .contact-title {
       width: 100%;
       text-align: center;
       
@@ -260,7 +273,7 @@ header, main, footer {
       }
     }
 
-    .home-ava, .login-ava, .register-ava, .about-ava {
+    .home-ava, .login-ava, .register-ava, .about-ava, .contact-ava {
       display: none;
     }
   }

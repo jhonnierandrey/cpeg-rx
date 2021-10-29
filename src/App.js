@@ -1,4 +1,4 @@
-import { Header, Main, Login, Register, About, NotFound, Footer } from './components/Index';
+import { Header, Main, Login, Register, About, Contact, NotFound, Footer } from './components/Index';
 
 import {
   Route,
@@ -16,6 +16,7 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/contact" component={Contact} />
           <Route component={NotFound} />
         </Switch>
       <Footer />
