@@ -9,6 +9,7 @@ function Header() {
                     <Link className="nav-link" aria-current="page" to="/">Home</Link>
                     <Link className="nav-link" aria-current="page" to="/login">Login</Link>
                     <Link className="nav-link" aria-current="page" to="/about">About</Link>
+                    <Link className="nav-link" aria-current="page" to="/contact">Contact</Link>
                 </nav>
             </div>
       </header>
